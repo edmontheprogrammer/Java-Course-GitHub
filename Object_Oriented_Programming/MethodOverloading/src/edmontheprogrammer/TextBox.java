@@ -1,4 +1,4 @@
-package com.edmontheprogrammer;
+package edmontheprogrammer;
 
 public class TextBox {
     public  String text = "";

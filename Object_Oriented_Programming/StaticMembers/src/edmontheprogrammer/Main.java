@@ -73,10 +73,33 @@ public class Main {
          * Constructor Overloading:
          *  We can overload constructors because technically constructors are also methods.
          *  But constructors are special methods.
+         *
+         * Static Members:
+         *  In Object-Oriented programming a class can have two types of members: instance members
+         *  and static members. Instance members belong to instances or objects.
+         *  In contrast we have static or class members, these are the fields and methods that belong
+         *  to a class, not an object.
+         *  Example of accessing static members in "Main", System.out.println(Employee.numberOfEmployees);
+         *
+         * What's the purpose of static members and when do we use them?
+         *  We use static members in situations where we present a concept that should be in a
+         *  single place. In other words, we use static fields in situations where a value is
+         *  independent of objects. And we want to share this value across all objects or instances
+         *  of the class.
+         *
+         * We can also create static methods.
+         *
+         * Note A: Static members can only see other static members (static fields, static methods) in the
+         *       Employee class.
+         *
+         * Note B: The "main()" method is declared as "static" because it enable the Java runtime to directly
+         *  call it (or call 'main()' ) without having to create a new object. So that's why the "main" method
+            is always declared as "static". 
          */
-        new Employee(10_000);
+
         var employee = new Employee(
                 50_000, 20);
+        Employee.printNumberOfEmployees();
         int wage = employee.calculateWage(10);
         System.out.println(wage);
 
